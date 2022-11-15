@@ -5,7 +5,6 @@ import no.hvl.dat100.jplab11.common.TODO;
 public abstract class Innlegg {
 
 	private int id, likes;
-
 	private String bruker, dato;
 
 	public Innlegg() {
@@ -61,14 +60,7 @@ public abstract class Innlegg {
 	}
 
 	public boolean erLik(Innlegg innlegg) {
-		boolean erlik = false; 
-		
-		if(id == getId()) {
-			erlik = true;
-		}
-		return erlik; 
-
-	}
+		return (this == innlegg); }
 
 	
 	
