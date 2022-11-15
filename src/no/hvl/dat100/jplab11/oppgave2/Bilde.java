@@ -6,26 +6,48 @@ public class Bilde extends Tekst {
 
 	// TODO - objekt variable
 	
+	public String url; 
+	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
+		super (id, bruker, dato , tekst); 
+		this.url = url; 
 	}
 
 	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
+		super(id, bruker, dato, likes, tekst);
+		this.url = url; 
 	}
 	
 	public String getUrl() {
-		throw new UnsupportedOperationException(TODO.method());
+		return url; 
 
 	}
 
 	public void setUrl(String url) {
-		throw new UnsupportedOperationException(TODO.method());
+		this.url = url; 
 	}
+		
+		
 
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method ());
+		//BILDE\n1\nOle Olsen\n23-10\n0\net bilde\nhttp://www.picture.com/oo.jpg\n
+		
+		String txt = "BILDE" + "\n"; 
+		txt += Integer.toString(getId()) + "\n";
+		txt += getBruker() + "\n";
+		txt += getDato() + "\n";
+		txt += Integer.toString(getLikes()) + "\n";
+		txt += getTekst() + "\n";
+		txt += url+ "\n";
+		
+		return txt; 
+		
+//		String txt = "Bilde" + "\n"; 
+//		
+//		return txt + super.toString() + url + "\n";
+//		
+		
 
 	}
 
